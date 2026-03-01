@@ -1,0 +1,35 @@
+.windowscontainer {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.sidewindow {
+    border-color: red;
+    border-style: solid;
+    width: 150px;
+}
+
+.mediaprocessing {
+    border-color: brown;
+    border-style: dashed;
+    margin: 10px 10px 10px 10px;
+}
+
+.medialist {
+    border-color: lightcoral;
+    border-style: dashed;
+    margin: 10px 10px 10px 10px;
+}
+
+.generalwindow {
+    border-color: blue;
+    border-style: solid;
+    width: 800px;
+}
+
+.settingswindow {
+    border-color: green;
+    border-style: solid;
+    margin: 10px 10px 10px 10px;
+}
