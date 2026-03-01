@@ -7,7 +7,7 @@
 .sidewindow {
     border-color: red;
     border-style: solid;
-    width: 200px;
+    width: 220px;
 }
 
 .mediaprocessing {
@@ -18,6 +18,12 @@
 
 .medialist {
     border-color: lightcoral;
+    border-style: dashed;
+    margin: 10px 10px 10px 10px;
+}
+
+.playlists {
+    border-color: rgb(255, 0, 0);
     border-style: dashed;
     margin: 10px 10px 10px 10px;
 }
