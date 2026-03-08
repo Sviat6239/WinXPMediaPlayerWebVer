@@ -1,41 +1,100 @@
+body {
+    background: linear-gradient(#3a6ea5, #7aa5d6);
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+
 .windowscontainer {
     display: flex;
     gap: 10px;
-    align-items: flex-start;
+    padding: 10px;
 }
+
 
 .sidewindow {
-    border-color: red;
-    border-style: solid;
     width: 220px;
+    background: #ece9d8;
+    border: 2px solid #003c74;
+    box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080;
 }
+
 
 .mediaprocessing {
-    border-color: brown;
-    border-style: dashed;
-    margin: 10px 10px 10px 10px;
-}
+    background: #f6f4e8;
+    border: 2px solid #b8b4a4;
+    margin: 10px;
+    padding: 5px;
 
+}
 .medialist {
-    border-color: lightcoral;
-    border-style: dashed;
-    margin: 10px 10px 10px 10px;
+    background: #f6f4e8;
+    border: 2px solid #b8b4a4;
+    margin: 10px;
+    padding: 5px;
+}
+.playlists {
+    background: #f6f4e8;
+    border: 2px solid #b8b4a4;
+    margin: 10px;
+    padding: 5px;
 }
 
-.playlists {
-    border-color: rgb(255, 0, 0);
-    border-style: dashed;
-    margin: 10px 10px 10px 10px;
+
+
+
+
+h1, h2, h3 {
+    color: #003c74;
+    font-weight: bold;
 }
+
 
 .generalwindow {
-    border-color: blue;
-    border-style: solid;
     width: 800px;
+    background: #ece9d8;
+    border: 2px solid #003c74;
+    padding: 10px;
+    box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080;
 }
 
+
 .settingswindow {
-    border-color: green;
-    border-style: solid;
-    margin: 10px 10px 10px 10px;
+    background: #ece9d8;
+    border: 2px solid #003c74;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.block_music {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 60px;
+    padding: 10px;
+
+    background: linear-gradient(#ffffff, #dcdcdc);
+    border: 2px solid #808080;
+    margin-bottom: 5px;
+
+    font-size: 13px;
+}
+
+
+.btn_play {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    background: linear-gradient(#3a6ea5, #1f4e85);
+    border: 2px solid #002c5c;
+
+    box-shadow: inset 1px 1px #6fa0d8, inset -1px -1px #001a3a;
+
+    cursor: pointer;
+}
+
+.btn_play:hover {
+    background: linear-gradient(#5a8fd6, #2b5fa3);
 }
