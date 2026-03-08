@@ -1,8 +1,14 @@
+import { DoPause, DoPlay } from "./contlolFlow";
+
 document.addEventListener('DOMContentLoaded', () => {
     const fileInput = document.getElementById('fileInput')
     const nowPlaying = document.getElementById('nowplaying')
     const playlists = document.querySelector('.playlists')
-    musics = []
+
+    let musics = []
+    let currentTrack = null
+    let currentIndex = -1
+
     class M {
         constructor(name, url) {
             this.name = name
@@ -23,6 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
         block.appendChild(btn_play)
         playlists.appendChild(block)
         btn_play.addEventListener('click', () => {
+
+            if (!currentTrack) {
+                currentTrack.audio.pause()
+            }
+
+            currentTrack = sound
+            currentIndex = musics.indexOf(sound)
+
             sound.audio.play()
             nowPlaying.innerHTML = `Now playing: ${sound.name}`
         })
@@ -36,4 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         musics.push(sound)
         add_sound(sound)
     })
+
+    play.addEventListener('click', DoPlay);
+    pause.addEventListener('click', DoPause);
 })
