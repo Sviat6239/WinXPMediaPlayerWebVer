@@ -35,4 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const forwardBtn = document.querySelector('.forward_btn');
     const shuflBtn = document.querySelector('.sufl_btn');
     const loopBtn = document.querySelector('.loop_btn');
+    const volumeSlider = document.querySelector('#volumeSlider');
 })
