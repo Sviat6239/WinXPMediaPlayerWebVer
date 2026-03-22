@@ -11,22 +11,47 @@
 <body>
     <div class="windowscontainer">
         <div class="sidewindow">
-            <div class="mediaprocessing">
+            <div class="side-mediaprocessing">
                 <h3>Add New </h3>
                 <input type="file" id="fileInput">
             </div>
 
-            <div class="medialist">
+            <div class="side-medialist">
                 <h3>Your Media</h3>
+                <div class="left-media-preview"></div>
             </div>
-            <div class="playlists">
+            <div class="side-playlists">
                 <h3>Your Playlists</h3>
+                <div class="left-playlists-preview"></div>
             </div>
         </div>
         <div class="generalwindow">
             <h1>Something</h1>
             <h2 id="nowplaying">Now playing: </h2>
         </div>
+
+        <div class="rightsidewindow">
+
+            <div class="medialist hidden">
+                <div class="right-panel-header">
+                    <h1>Media</h1>
+                    <button class="close-page-btn" type="button">Hide</button>
+                </div>
+                <div class="right-media-list"></div>
+            </div>
+            <div class="playlists hidden">
+                <div class="right-panel-header">
+                    <h1>Playlists</h1>
+                    <button class="close-page-btn" type="button">Hide</button>
+                </div>
+                <div class="playlist-actions">
+                    <button class="create-playlist-btn" type="button">Create playlist</button>
+                </div>
+                <div class="right-playlists-list"></div>
+            </div>
+        </div>
+
+
     </div>
     <div class="settingswindow">
         <h1>controlflow</h1>
@@ -37,12 +62,13 @@
         <button class="shufle">🔀</button>
         <button class="loop">🔁</button>
         <div class="volumecontrol">
-            <h3>Volume</h3>
+            <label for="volumeSlider">Volume</label>
             <input type="range" min="1" max="100" value="50" class="slider" id="volumeSlider">
         </div>
     </div>
+
 </body>
 <script src="static/js/index.js"></script>
-<script src="static/js/contlolFlow.js"></script>
+<script src="static/js/windowManager.js"></script>
 
 </html>

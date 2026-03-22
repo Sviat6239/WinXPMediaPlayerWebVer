@@ -17,14 +17,22 @@ body {
     box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080;
 }
 
-.mediaprocessing {
+.rightsidewindow {
+    background: #ece9d8;
+    border: 2px solid #003c74;
+    width: 270px;
+    height: 620px;
+    box-shadow: inset 1px 1px #ffffff, inset -1px -1px #808080;
+}
+
+.side-mediaprocessing {
     background: #f6f4e8;
     border: 2px solid #b8b4a4;
     margin: 10px;
     padding: 5px;
 }
 
-.medialist {
+.side-medialist {
     background: #f6f4e8;
     border: 2px solid #b8b4a4;
     height: 255px;
@@ -32,12 +40,43 @@ body {
     padding: 5px;
 }
 
-.playlists {
+.side-playlists {
     background: #f6f4e8;
     border: 2px solid #b8b4a4;
     height: 205px;
     margin: 10px;
     padding: 5px;
+}
+
+.left-media-preview,
+.left-playlists-preview {
+    margin-top: 8px;
+    max-height: 185px;
+    overflow-y: auto;
+    border-top: 1px solid #b8b4a4;
+    padding-top: 6px;
+}
+
+.preview-item {
+    background: #ffffff;
+    border: 1px solid #b8b4a4;
+    margin-bottom: 6px;
+    padding: 4px 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.side-medialist,
+.side-playlists {
+    cursor: pointer;
+}
+
+.side-medialist.active,
+.side-playlists.active {
+    border-color: #3a6ea5;
+    background: #e4f0ff;
 }
 
 .generalwindow {
@@ -99,8 +138,120 @@ body {
     box-shadow: inset -1px -1px #ffffff, inset 1px 1px #404040;
 }
 
-
 .settingswindow {
     position: fixed;
     bottom: 0;
+}
+
+.right-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.right-media-list,
+.right-playlists-list {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 540px;
+    overflow-y: auto;
+}
+
+.track-item,
+.playlist-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #b8b4a4;
+    background: #f6f4e8;
+    padding: 8px;
+}
+
+.item-title {
+    margin: 0;
+    font-size: 13px;
+}
+
+.item-title.favorite::after {
+    content: " *";
+    color: #c57d00;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.item-play-btn,
+.three-dots-btn,
+.create-playlist-btn {
+    font-family: Tahoma, Verdana, sans-serif;
+    background: linear-gradient(#ffffff, #dcdcdc);
+    border: 2px solid #808080;
+    cursor: pointer;
+}
+
+.item-play-btn,
+.three-dots-btn {
+    min-width: 28px;
+    height: 28px;
+}
+
+.create-playlist-btn {
+    padding: 6px 10px;
+}
+
+.playlist-actions {
+    margin: 10px;
+}
+
+.context-menu {
+    position: fixed;
+    z-index: 1000;
+    background: #ece9d8;
+    border: 2px solid #808080;
+    box-shadow: inset 1px 1px #ffffff, inset -1px -1px #404040;
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+    max-height: calc(100vh - 16px);
+    overflow-y: auto;
+}
+
+.context-menu button {
+    border: 0;
+    border-bottom: 1px solid #b8b4a4;
+    background: transparent;
+    text-align: left;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+.context-menu button:last-child {
+    border-bottom: 0;
+}
+
+.context-menu button:hover {
+    background: #d9e9ff;
+}
+
+.close-page-btn {
+    font-family: Tahoma, Verdana, sans-serif;
+    background: linear-gradient(#ffffff, #dcdcdc);
+    border: 2px solid #808080;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.close-page-btn:active {
+    box-shadow: inset -1px -1px #ffffff, inset 1px 1px #404040;
+}
+
+.hidden {
+    display: none;
 }
